@@ -2,7 +2,7 @@
  * Calc.h
  *
  *  Created on: 10 Feb 2020
- *      Author: agibson
+ *      Author: Andy Gibson
  */
 
 #ifndef CALCLIB_INCLUDE_CALC_CALC_H_
@@ -11,6 +11,7 @@
 class Calc {
 public:
 	int add(int a,int b);
+	int sub(int a,int b);
 };
 
 
