@@ -11,13 +11,13 @@ set(GLFW_BUILD_TESTS OFF CACHE INTERNAL "Build the GLFW test programs")
 set( GLFW_BUILD_DOCS OFF CACHE BOOL  "GLFW lib only" )
 set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
 
-add_subdirectory( glfw)
-include_directories(glad/include)
+add_subdirectory( lib/glfw)
+include_directories(lib/glad/include)
 
 
-set( SRC src/main.cpp src/glad.c)
+set( SRC src/main.cpp lib/src/glad.c)
 
-add_executable( OpenGL-starter src/main.cpp glad/src/glad.c )
+add_executable( OpenGL-starter src/main.cpp lib/glad/src/glad.c)
 
 target_link_libraries( OpenGL-starter ${OPENGL_LIBRARIES} glfw )
 
