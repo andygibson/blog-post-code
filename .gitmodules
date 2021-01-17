@@ -1,0 +1,3 @@
+[submodule "c/cmake-opengl/glfw"]
+	path = c/cmake-opengl/glfw
+	url = https://github.com/glfw/glfw
