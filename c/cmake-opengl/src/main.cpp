@@ -1,5 +1,8 @@
 
 // GLAD
+
+
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -20,11 +23,15 @@ int main(void)
         return -1;
     }
 
+
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
-    gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+    //gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+    gladLoadGL();
 
     glClearColor( 0.2f, 0.4f, 0.8f, 0.0f );
+    glAttachShader();
+
 
 
     /* Loop until the user closes the window */

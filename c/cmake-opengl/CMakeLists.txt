@@ -13,10 +13,14 @@ set( GLFW_INSTALL OFF CACHE BOOL  "GLFW lib only" )
 
 add_subdirectory( lib/glfw)
 include_directories(lib/glad/include)
+include_directories(lib/glfw/include)
+
+ 
 
 
-set( SRC src/main.cpp lib/src/glad.c)
+set( SRC src/main.cpp lib/glad/src/glad.c)
 
+##add_executable( OpenGL-starter src/main.cpp lib/glad/src/glad.c)
 add_executable( OpenGL-starter src/main.cpp lib/glad/src/glad.c)
 
 target_link_libraries( OpenGL-starter ${OPENGL_LIBRARIES} glfw )
